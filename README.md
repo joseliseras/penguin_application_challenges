@@ -9,7 +9,7 @@ Clona este repositorio para resolver los ejercicios, una vez que los finalices s
 - magali.martinez@penguin.academy
 - analia@penguin.academy
   
-Tienes tiempo hasta el …
+Tienes tiempo hasta 3 dias una vez recibido el correo con el repositorio.
 #### ATENCIÓN si pasas de la fecha límite tu aplicación ya no será válida.
 
 ## Challenges
