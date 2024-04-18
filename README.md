@@ -6,6 +6,7 @@ Estos challenge son para evaluar tus conocimientos y de esta manera determinar s
 Clona este repositorio para resolver los ejercicios, una vez que los finalices subelos a un repositorio propio y envialos a los siguientes correos:
 - arturo.fernadnez@penguin.academy
 - eduardo.quinonez@penguin.academy
+- magali.martinez@penguin.academy
 - analia@penguin.academy
   
 Tienes tiempo hasta el …
