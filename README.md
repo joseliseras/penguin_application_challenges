@@ -10,7 +10,7 @@ Clona este repositorio para resolver los ejercicios, una vez que los finalices s
 - analia@penguin.academy
   
 Tienes tiempo hasta 3 dias una vez recibido el correo con el repositorio.
-#### ATENCIÓN si pasas de la fecha límite tu aplicación ya no será válida.
+#### ATENCIÓN si pasas de la fecha límite tu ejercicio ya no será válido y deberas volver a completar el bootcamp.
 
 ## Challenges
 La descripción de los challenges se encuentran en sus archivos correspondientes, lee muy bien las instrucciones y ¡manos a la obra!
