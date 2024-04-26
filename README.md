@@ -4,9 +4,10 @@ Estos challenge son para evaluar tus conocimientos y de esta manera determinar s
 
 ## Instrucciones de Entrega
 Clona este repositorio para resolver los ejercicios, una vez que los finalices subelos a un repositorio propio y envialos a los siguientes correos:
-- arturo.fernandez@penguin.academy
+- diana.sequeira@penguin.academy
 - eduardo.quinonez@penguin.academy
-- gustavo.casaccia@penguin.academy
+- clara.cespedes@penguin.academy
+- magali.martinez@penguin.academy
 - analia@penguin.academy
   
 Tienes tiempo hasta 3 dias una vez recibido el correo con el repositorio.
