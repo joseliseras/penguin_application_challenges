@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reservar en el Restaurante</title>
+    
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+
+<body class="bg-gray-100">
+    <div class="container mx-auto p-4">
+        <h1 class="text-3xl font-bold mb-4">Reservar en el Restaurante</h1>
+        <form id="reservation-form" class="max-w-md">
+            <div class="mb-4">
+                <label for="nombre" class="block text-gray-700 font-bold mb-2">Nombre:</label>
+                <input type="text" id="nombre" name="nombre" class="border rounded px-3 py-2 w-full">
+            </div> 
+            <div class="mb-4">
+                <label for="apellido" class="block text-gray-700 font-bold mb-2">Apellido:</label>
+                <input type="text" id="apellido" name="apellido" class="border rounded px-3 py-2 w-full">
+            </div> 
+            
+            <div class="mb-4">
+                <label for="telefono" class="block text-gray-700 font-bold mb-2">Telefono:</label>
+                <input type="tel" id="telefono" name="telefono" class="border rounded px-3 py-2 w-full">
+            </div> 
+
+            <div class="mb-4">
+                <label for="email" class="block text-gray-700 font-bold mb-2">Email:</label>
+                <input type="email" id="email" name="email" class="border rounded px-3 py-2 w-full">
+            </div> 
+
+            <div class="mb-4">
+                <label for="fecha" class="block text-gray-700 font-bold mb-2">Fecha:</label>
+                <input type="date" id="fecha" name="fecha" class="border rounded px-3 py-2 w-full">
+            </div>
+            <div class="mb-4">
+                <label for="hora" class="block text-gray-700 font-bold mb-2">Hora:</label>
+                <input type="time" id="hora" name="hora" class="border rounded px-3 py-2 w-full">
+            </div>
+            <div class="mb-4">
+                <label for="num_personas" class="block text-gray-700 font-bold mb-2">Número de Personas:</label>
+                <input type="number" id="num_personas" name="num_personas" min="1" class="border rounded px-3 py-2 w-full">
+            </div>
+            <button type="submit" class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">Reservar</button>
+            <a href="{{ url_for('administrar_reserva') }}" class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">Administrar Reserva</a>
+
+        </form>
+        
+    </div>
+    <div id="message" class="text-red-500 mt-2"></div>
+
+      <!-- Incluir jQuery -->
+      <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+      <script>
+        $(document).ready(function() {
+            $('#reservation-form').submit(function(event) {
+                event.preventDefault(); // Prevenir el comportamiento predeterminado del envío del formulario
+        
+                // Obtener los datos del formulario
+                var formData = {
+                    nombre: $('#nombre').val(),
+                    apellido: $('#apellido').val(),
+                    telefono: $('#telefono').val(),
+                    email: $('#email').val(),
+                    fecha: $('#fecha').val(),
+                    hora: $('#hora').val(),
+                    num_personas: $('#num_personas').val()
+                };
+        
+                // Enviar los datos al servidor mediante AJAX
+                $.ajax({
+                    type: 'POST',
+                    url: '/guardar_reservacion',
+                    contentType: 'application/json',
+                    data: JSON.stringify(formData),
+                    success: function(response) {
+                        // Manejar la respuesta del servidor
+                        $('#reservation-form').trigger("reset"); // Limpiar el formulario
+                        $('#message').text('Reserva creada correctamente con ID: ' + response.id); // Mostrar mensaje de éxito
+                    },
+                    error: function(error) {
+                        // Manejar errores de la solicitud AJAX
+                        $('#message').text('Error al guardar la reserva. Por favor, inténtelo de nuevo.'); // Mostrar mensaje de error
+                    }
+                });
+            });
+        });
+        </script>
+        
+  </body>
+  </html>
